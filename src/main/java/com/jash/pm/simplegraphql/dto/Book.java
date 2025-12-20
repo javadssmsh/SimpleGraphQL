@@ -6,14 +6,15 @@ import java.util.List;
 public record Book(
         Integer id,
         String name,
-        Integer pageCount
+        Integer pageCount,
+        Integer authorId
 ) {
 
     public static List<Book> books = Arrays.asList(
-            new Book(1, "javad", 600),
-            new Book(2, "javad shir", 700),
-            new Book(3, "javad new", 800),
-            new Book(4, "javad end", 500)
+            new Book(1, "javad", 600, 1),
+            new Book(2, "javad shir", 700, 1),
+            new Book(3, "javad new", 800, 2),
+            new Book(4, "javad end", 500, 2)
     );
 
     public static Book getBookById(Integer id) {
